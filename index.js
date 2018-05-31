@@ -31,6 +31,13 @@ module.exports = {
         specialLink: ["to"]
       }
     ],
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "required": {
+        "some": [ "nesting", "id" ]
+      }
+    }],
     "no-underscore-dangle": 0,
     "no-debugger": 0,
     "no-console": 0,
