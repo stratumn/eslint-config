@@ -63,7 +63,8 @@ module.exports = {
           "**/karma.conf.js",
           "**/setupTests.js",
           "**/*stories.js",
-          "**/jest.*.js"
+          "**/jest.*.js",
+          "**/utils/tests.js"
         ],
         optionalDependencies: false
       }
