@@ -1,6 +1,6 @@
 {
   "name": "@stratumn/eslint-config",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Stratumn linter config",
   "main": "index.js",
   "license": "MIT",
