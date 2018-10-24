@@ -1,11 +1,11 @@
 {
   "name": "@stratumn/eslint-config",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Stratumn linter config",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "babel-eslint": "^8.2.2",
+    "babel-eslint": "^9.0.0",
     "eslint": "^4.8.0",
     "eslint-config-airbnb": "^16.0.0",
     "eslint-config-prettier": "^2.6.0",
