@@ -7,7 +7,7 @@ module.exports = {
     }
   },
   parser: "babel-eslint",
-  extends: ["airbnb", "prettier", "prettier/react", "prettier/standard"],
+  extends: ["airbnb", "prettier"],
   env: {
     browser: true,
     mocha: true,
@@ -17,13 +17,18 @@ module.exports = {
   plugins: ["prettier"],
   rules: {
     "react/no-array-index-key": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/destructuring-assignment": 0,
+    'react/static-property-placement': [2, 'static public field'],
+    "react/state-in-constructor": 0,
+    "react/sort-comp": 0,
+    "react/prefer-stateless-function": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": 0,
     "jsx-a11y/no-noninteractive-element-interactions": 0,
     "jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/no-static-element-interactions": 0,
-    "no-use-before-define": 0,
     "jsx-a11y/no-autofocus": 0,
-    "react/sort-comp": 0,
-    "react/prefer-stateless-function": 0,
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
@@ -35,24 +40,23 @@ module.exports = {
       2,
       {
         "required": {
-        "some": [ "nesting", "id" ]
-      }
-    }],
+          "some": ["nesting", "id"]
+        }
+      }],
+    "no-use-before-define": 0,
     "no-underscore-dangle": 0,
     "no-debugger": 0,
     "no-console": 0,
-    "import/no-named-as-default": 0,
-    "import/prefer-default-export": 0,
-    "object-shorthand": 0,
-    "react/forbid-prop-types": 0,
-    "class-methods-use-this": 0,
     "no-param-reassign": [
       2,
       {
         props: false
       }
     ],
-    "react/jsx-filename-extension": 0,
+    "object-shorthand": 0,
+    "class-methods-use-this": 0,
+    "import/no-named-as-default": 0,
+    "import/prefer-default-export": 0,
     "import/no-extraneous-dependencies": [
       "error",
       {
