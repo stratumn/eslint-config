@@ -1,0 +1,27 @@
+version: v1.0
+name: eslint-config pipeline
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+execution_time_limit:
+  minutes: 15
+global_job_config:
+  prologue:
+    commands:
+      - checkout
+      - sem-version node 14.15
+blocks:
+  - name: Install dependencies
+    task:
+      jobs:
+        - name: NPM dependencies
+          commands:
+            - KEY=node-modules-$(checksum yarn.lock)
+            - cache restore $KEY
+            - cache has_key $KEY || yarn --frozen-lockfile
+            - cache store $KEY node_modules
+
+promotions:
+  - name: Publish to npm registry
+    pipeline_file: npm-publish.yml
