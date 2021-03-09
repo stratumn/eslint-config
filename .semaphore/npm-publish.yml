@@ -9,6 +9,7 @@ execution_time_limit:
 global_job_config:
   prologue:
     commands:
+      - checkout
       - sem-version node 14.15
 blocks:
   - name: Publish
@@ -18,7 +19,6 @@ blocks:
         - name: github-write
       prologue:
         commands:
-          - checkout
           - cache restore lib-${SEMAPHORE_GIT_SHA}
           - cache restore node-modules-$(checksum yarn.lock)
           # We need to export the branch name in order for semantic-release to proceed.
