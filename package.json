@@ -4,6 +4,9 @@
   "description": "Stratumn linter config",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "release": "semantic-release"
+  },
   "dependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.21.0",
