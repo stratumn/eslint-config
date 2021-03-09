@@ -12,7 +12,7 @@ First install the package as a dev dependency:
 yarn add -D @stratumn/eslint-config
 ```
 
-Then, add this to your .eslintrc file:
+Then add this to your .eslintrc file:
 
 ```json
 {
